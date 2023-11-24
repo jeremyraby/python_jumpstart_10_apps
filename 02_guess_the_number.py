@@ -4,10 +4,11 @@ print('-' * 15)
 print('   GUESS THE NUMBER')
 print('-' * 15)
 
-secret_num = [1,2,3,4,5,6,7,8,9,10]
+user_guess = input(f"I'm thinking of a number between 1 and 10. Can you guess it?")
 
-message = f"I'm thinking of a number between 1 and 10. Can you guess it? "
-print(input(message))
+number_choices = [1,2,3,4,5,6,7,8,9,10]
+secret_number = random.choice(number_choices)
 
-if message > random.choice(secret_num):
-    print("Sorry. That's too low.")
+while user_guess != secret_number:
+    if user_guess > random.choice(secret_number):
+        print("Sorry. That's too low.")
