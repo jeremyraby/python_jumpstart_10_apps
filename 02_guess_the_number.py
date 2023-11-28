@@ -16,3 +16,4 @@ while True:
         continue
     else:
         print(f"Great guess! {user_guess} is right on the money!")
+        break
